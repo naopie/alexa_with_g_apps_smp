@@ -1,0 +1,91 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "ジースプレッド",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": [
+                        "キャンセル"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "ヘルプ"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "バイバイ",
+                        "やめる"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "RssIntent",
+                    "slots": [
+                        {
+                            "name": "rssno",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                " {rssno}",
+                                "ナンバー {rssno}",
+                                "{rssno} 番",
+                                "{rssno} 番で"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "ジースプレッドで {rssno} を開いて",
+                        "ジースプレッドの {rssno} を開いて",
+                        "ジースプレッドの {rssno} 番を開いて",
+                        "ジースプレッドで {rssno} 番を開いて",
+                        "ナンバー {rssno} ",
+                        "{rssno} 番で",
+                        "{rssno} 番",
+                        "{rssno} "
+                    ]
+                }
+            ],
+            "types": []
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "RssIntent",
+                    "delegationStrategy": "SKILL_RESPONSE",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "rssno",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1436904783988.241542762252"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.1436904783988.241542762252",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "スプレッドシートの何番を読みますか？"
+                    }
+                ]
+            }
+        ]
+    }
+}
