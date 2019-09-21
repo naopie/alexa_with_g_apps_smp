@@ -19,7 +19,7 @@ const LaunchRequestHandler = {
     handle(handlerInput) {
 	//const speakOutput = 'Welcome, you can say Hello or Help. Which would you like to try?';
         console.log('step 21');
-	const speakOutputput = '1から12のどれにする？'; 
+	const speakOutput = '1から12のどれにする？'; 
 
 	return handlerInput.responseBuilder
 	    .addDelegateDirective({
