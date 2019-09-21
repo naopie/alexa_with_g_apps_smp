@@ -3,3 +3,6 @@
 This is a sample program for reading news title with Alexa.
 For more details, refer to 
 https://techbookfest.org/event/tbf07/circle/5698174320640000
+
+これはAlexaをつかって新聞タイトルを読むサンプルプログラムです。詳細は上述のリンクを
+ご確認ください。
